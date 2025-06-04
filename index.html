@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2時間通勤を価値ある時間に変える完全ガイド</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">2時間通勤を価値ある時間に変える完全ガイド</h1>
+            <p class="header__subtitle">疲れていてもできる！電車時間活用法</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Problem Empathy Section -->
+        <section class="section empathy">
+            <div class="container">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>その悩み、よくわかります</h2>
+                        <p>帰りの電車で2時間、本当は学びたい、振り返りたい、有意義に過ごしたいと思っているのに...</p>
+                        <div class="empathy__points">
+                            <div class="empathy__point">
+                                <span class="empathy__icon">😴</span>
+                                <p>一日の疲れでぐったり、何もやる気が起きない</p>
+                            </div>
+                            <div class="empathy__point">
+                                <span class="empathy__icon">📱</span>
+                                <p>ついついYouTubeをだらだら見てしまう</p>
+                            </div>
+                            <div class="empathy__point">
+                                <span class="empathy__icon">😔</span>
+                                <p>時間を無駄にしてしまった罪悪感</p>
+                            </div>
+                        </div>
+                        <p><strong>でも、それって普通のことです。疲れているのに無理をする必要はありません。</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fatigue Checker -->
+        <section class="section fatigue-checker">
+            <div class="container">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>今日の疲労度チェック</h2>
+                        <p>まずは今の状態を確認して、無理のない活動を選びましょう</p>
+                        <div class="fatigue-options">
+                            <button class="fatigue-btn" data-level="very_tired">
+                                <span class="fatigue-emoji">🥱</span>
+                                <span>超疲れている</span>
+                            </button>
+                            <button class="fatigue-btn" data-level="tired">
+                                <span class="fatigue-emoji">😮‍💨</span>
+                                <span>普通に疲れている</span>
+                            </button>
+                            <button class="fatigue-btn" data-level="energetic">
+                                <span class="fatigue-emoji">😊</span>
+                                <span>まあまあ元気</span>
+                            </button>
+                        </div>
+                        <div id="fatigue-result" class="fatigue-result hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="section solutions">
+            <div class="container">
+                <h2>解決策を見つけよう</h2>
+                <div class="tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" data-tab="fatigue">疲労度別アプローチ</button>
+                        <button class="tab-btn" data-tab="time">時間別活用法</button>
+                        <button class="tab-btn" data-tab="methods">具体的な方法</button>
+                    </div>
+
+                    <!-- Fatigue-based approach -->
+                    <div class="tab-content active" id="fatigue-tab">
+                        <div class="fatigue-levels">
+                            <div class="fatigue-level-card" data-level="very_tired">
+                                <h3>🥱 超疲れている日</h3>
+                                <p>無理は禁物！リラックス重視で</p>
+                                <ul class="activity-list">
+                                    <li>好きな音楽を聴いてリラックス</li>
+                                    <li>軽いストレッチ</li>
+                                    <li>景色を眺める</li>
+                                    <li>瞑想・深呼吸</li>
+                                </ul>
+                            </div>
+                            <div class="fatigue-level-card" data-level="tired">
+                                <h3>😮‍💨 普通に疲れている日</h3>
+                                <p>軽めの活動から始めよう</p>
+                                <ul class="activity-list">
+                                    <li>音声コンテンツ（ポッドキャスト）</li>
+                                    <li>AIとの軽い対話</li>
+                                    <li>簡単な読書</li>
+                                    <li>一日の振り返り</li>
+                                </ul>
+                            </div>
+                            <div class="fatigue-level-card" data-level="energetic">
+                                <h3>😊 まあまあ元気な日</h3>
+                                <p>しっかり学習に取り組める！</p>
+                                <ul class="activity-list">
+                                    <li>動画学習</li>
+                                    <li>資格勉強</li>
+                                    <li>AI活用で深い学習</li>
+                                    <li>明日の計画立案</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time-based approach -->
+                    <div class="tab-content" id="time-tab">
+                        <div class="time-schedule">
+                            <div class="time-block">
+                                <h3>最初の30分</h3>
+                                <p class="time-purpose">リラックス&軽い活動</p>
+                                <p>仕事モードから切り替える時間。無理をせず、心を落ち着かせましょう。</p>
+                            </div>
+                            <div class="time-block">
+                                <h3>中間の1時間</h3>
+                                <p class="time-purpose">メイン活動</p>
+                                <p>疲労度に応じた学習や活動のメイン時間。集中できる時間帯です。</p>
+                            </div>
+                            <div class="time-block">
+                                <h3>最後の30分</h3>
+                                <p class="time-purpose">明日の準備&振り返り</p>
+                                <p>今日を振り返り、明日への準備をする時間。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specific methods -->
+                    <div class="tab-content" id="methods-tab">
+                        <div class="methods-grid">
+                            <div class="method-card">
+                                <h3>🤖 AI活用法</h3>
+                                <ul>
+                                    <li>ChatGPT音声機能での一日振り返り</li>
+                                    <li>学習内容についてAIに質問</li>
+                                    <li>明日の計画をAIと相談</li>
+                                    <li>ビジネス知識をAIから学習</li>
+                                </ul>
+                            </div>
+                            <div class="method-card">
+                                <h3>📚 マイクロラーニング</h3>
+                                <ul>
+                                    <li>5-6分の動画学習</li>
+                                    <li>ポモドーロテクニック（25分集中）</li>
+                                    <li>音声コンテンツ（ポッドキャスト）</li>
+                                    <li>電子書籍・オーディオブック</li>
+                                </ul>
+                            </div>
+                            <div class="method-card">
+                                <h3>💪 身体ケア</h3>
+                                <ul>
+                                    <li>電車内軽エクササイズ</li>
+                                    <li>疲労回復ストレッチ</li>
+                                    <li>深呼吸・瞑想</li>
+                                    <li>姿勢改善</li>
+                                </ul>
+                            </div>
+                            <div class="method-card">
+                                <h3>🎯 習慣化のコツ</h3>
+                                <ul>
+                                    <li>ハードルを下げる</li>
+                                    <li>ゲーム感覚で取り組む</li>
+                                    <li>時間と場所を決める</li>
+                                    <li>3日坊主でも自分を責めない</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habit Tracker -->
+        <section class="section habit-tracker">
+            <div class="container">
+                <div class="card">
+                    <div class="card__body">
+                        <h2>習慣トラッカー</h2>
+                        <p>小さな積み重ねが大きな変化を生みます</p>
+                        <div class="habit-list">
+                            <div class="habit-item">
+                                <input type="checkbox" id="habit1" class="habit-checkbox">
+                                <label for="habit1">5分間の深呼吸をした</label>
+                            </div>
+                            <div class="habit-item">
+                                <input type="checkbox" id="habit2" class="habit-checkbox">
+                                <label for="habit2">AIと対話をした</label>
+                            </div>
+                            <div class="habit-item">
+                                <input type="checkbox" id="habit3" class="habit-checkbox">
+                                <label for="habit3">学習コンテンツを見た</label>
+                            </div>
+                            <div class="habit-item">
+                                <input type="checkbox" id="habit4" class="habit-checkbox">
+                                <label for="habit4">一日を振り返った</label>
+                            </div>
+                            <div class="habit-item">
+                                <input type="checkbox" id="habit5" class="habit-checkbox">
+                                <label for="habit5">身体ケアをした</label>
+                            </div>
+                        </div>
+                        <div class="habit-progress">
+                            <p>今日の達成度: <span id="progress-text">0/5</span></p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq">
+            <div class="container">
+                <h2>よくある悩み・質問</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>やる気が出ない時はどうする？</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>まずは焦らず、小さなことから始めましょう。音楽を聴く、深呼吸をするなど、5分でできることから。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>スマホ依存から抜け出すには？</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>通知をオフにし、代替活動を用意しておくことが大切。AIとの対話など、有益な活動に置き換えましょう。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>継続できない時の対処法は？</span>
+                            <span class="faq-arrow">▼</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>完璧を求めず、「なんもやらんよりマシ」の精神で。3日坊主でも、また始めればOKです。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="section resources">
+            <div class="container">
+                <h2>おすすめリソース</h2>
+                <div class="resources-grid">
+                    <div class="resource-category">
+                        <h3>🎧 音声コンテンツ</h3>
+                        <ul>
+                            <li>Voicy（ボイシー）</li>
+                            <li>Spotify ポッドキャスト</li>
+                            <li>Audible</li>
+                            <li>YouTube Music</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>🤖 AI ツール</h3>
+                        <ul>
+                            <li>ChatGPT（音声機能）</li>
+                            <li>Google Bard</li>
+                            <li>Claude</li>
+                            <li>Perplexity</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>📱 学習アプリ</h3>
+                        <ul>
+                            <li>Schoo</li>
+                            <li>Udemy</li>
+                            <li>TED</li>
+                            <li>YouTube（教育系チャンネル）</li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>🧘 リラックス</h3>
+                        <ul>
+                            <li>Calm</li>
+                            <li>Headspace</li>
+                            <li>寝たまんまヨガ</li>
+                            <li>自然音アプリ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 2時間通勤活用ガイド. あなたの時間を価値あるものに。</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
